@@ -16,7 +16,7 @@ if (st.button("Predict Score")):
         "gender_Male":gender_Male
     }
 
-    response=requests.post("http://127.0.0.1:8000/predict",json=inp_data)
+    response=requests.post("https://student-score-prediction-1.onrender.com/predict",json=inp_data)
     #st.write(result["Predicted_score"])
     result=response.json()
     st.write("Predicted score",result['Predicted_score'])
